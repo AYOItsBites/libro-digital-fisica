@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Página Web Física</title>
+
+  <style>
+
+    :root{
+      --bg:#0b1020;
+      --text:#eaf0ff;
+      --muted:#a7b4d6;
+      --line: rgba(255,255,255,.10);
+      --link:#6aa6ff;
+      --max: 1200px;
+    }
+
+    *{
+      box-sizing:border-box;
+    }
+
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+
+      background:
+        radial-gradient(1200px 700px at 20% 10%, rgba(124,92,255,.20), transparent 60%),
+        radial-gradient(1000px 600px at 80% 20%, rgba(106,166,255,.18), transparent 55%),
+        var(--bg);
+
+      line-height:1.7;
+    }
+
+    /* HEADER */
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      backdrop-filter:blur(10px);
+      background:rgba(11,16,32,.72);
+      border-bottom:1px solid var(--line);
+    }
+
+    .bar{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 20px;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+    }
+
+    .title{
+      font-weight:900;
+      font-size:18px;
+      letter-spacing:.3px;
+    }
+
+    .small{
+      color:var(--muted);
+      font-size:13px;
+      font-weight:700;
+    }
+
+    /* NAV */
+
+    nav{
+      display:flex;
+      gap:15px;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:white;
+      background:rgba(255,255,255,.08);
+      padding:10px 18px;
+      border-radius:12px;
+      font-size:14px;
+      font-weight:700;
+      transition:.2s;
+    }
+
+    nav a:hover{
+      background:rgba(255,255,255,.16);
+      transform:translateY(-2px);
+    }
+
+    /* MAIN */
+
+    main{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:40px 20px 80px;
+    }
+
+    h1{
+      font-size:52px;
+      line-height:1.1;
+      margin-bottom:10px;
+    }
+
+    .materia{
+      color:#6aa6ff;
+      font-size:20px;
+      font-weight:800;
+      margin-bottom:10px;
+    }
+
+    .note{
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    hr{
+      border:0;
+      border-top:1px solid var(--line);
+      margin:35px 0;
+    }
+
+    p{
+      color:rgba(234,240,255,.92);
+      font-size:16px;
+    }
+
+    .block{
+      border-left:3px solid rgba(106,166,255,.45);
+      padding-left:14px;
+      margin:22px 0;
+      color:var(--muted);
+    }
+
+    /* CARDS */
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:30px;
+      margin-top:40px;
+    }
+
+    .card{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:18px;
+      overflow:hidden;
+      backdrop-filter:blur(8px);
+      transition:.25s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 10px 30px rgba(0,0,0,.25);
+    }
+
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .card-content{
+      padding:20px;
+    }
+
+    .card h3{
+      margin-top:0;
+      margin-bottom:14px;
+      font-size:24px;
+    }
+
+    .label{
+      color:#6aa6ff;
+      font-weight:800;
+      margin-bottom:5px;
+    }
+
+    .card p{
+      color:#d6ddff;
+      font-size:14px;
+      margin-bottom:18px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:950px){
+
+      .cards{
+        grid-template-columns:1fr;
+      }
+
+      h1{
+        font-size:38px;
+      }
+
+      .bar{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      nav{
+        flex-wrap:wrap;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <div class="bar">
+
+      <div>
+        <div class="title">Página Web Física</div>
+        <div class="small">
+          Diego Baigts • Profesor Jovanni
+        </div>
+      </div>
+
+      <nav>
+        <a href="index.html">Periodo 1</a>
+        <a href="index2.html">Periodo 2</a>
+        <a href="index3.html">Periodo 3</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- MAIN -->
+
+  <main>
+
+    <div class="materia">Física • 4E</div>
+
+    <h1>
+      EVIDENCIAS DEL SEGUNDO PERIODO
+    </h1>
+
+    <p class="note">
+      12/01/26 - 18/05/26
+    </p>
+
+    <hr>
+
+    <p>
+      Bienvenido a la página oficial de trabajos del salón 4E. 
+      Aquí se muestran las evidencias y actividades realizadas durante el segundo periodo de Física.
+    </p>
+
+    <div class="block">
+      “Los que preguntan no son tontos, los tontos son los que no preguntan.”
+    </div>
+
+    <p>
+      Gracias al profesor Jovanni por guiarnos durante este segundo periodo.
+    </p>
+
+    <hr>
+
+    <!-- CARDS -->
+
+    <section class="cards">
+
+      <!-- CARD 1 -->
+
+      <div class="card">
+        <img src="Imagenes2/PERIODO2 1.jpg" alt="Evidencia 1">
+
+        <div class="card-content">
+
+          <h3>Fuerza en el Émbolo Mayor de una Prensa Hidráulica</h3>
+
+          <div class="label">Descripción</div>
+
+          <p>
+           Se calcula la fuerza que se obtiene en el émbolo mayor cuando se aplica una fuerza de 600 N en el émbolo menor.
+          </p>
+
+          <div class="label">Explicación</div>
+
+          <p>
+            Este tema usa el principio de Pascal, que dice que la presión se transmite por igual en un fluido. Se compara el área del émbolo menor con el área del émbolo mayor para saber cuánto aumenta la fuerza. Como el émbolo mayor tiene más área, la fuerza resultante también es mayor.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+
+      <div class="card">
+        <img src="Imagenes2/PERIODO2 2.jpg" alt="Evidencia 2">
+
+        <div class="card-content">
+
+          <h3>Fuerza Aplicada en el Émbolo Menor</h3>
+
+          <div class="label">Descripción</div>
+
+          <p>
+            Se busca la fuerza que debe aplicarse en el émbolo menor para producir una fuerza grande en el émbolo mayor.
+          </p>
+
+          <div class="label">Explicación</div>
+
+          <p>
+            Aquí se usa la relación entre fuerza y área: F/A = f/a. Como el émbolo mayor tiene más área, se necesita una fuerza menor en el émbolo pequeño para generar una fuerza grande en el otro lado.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+
+      <div class="card">
+        <img src="Imagenes2/PERIODO2 3.jpg" alt="Evidencia 3">
+
+        <div class="card-content">
+
+          <h3>Diámetro Necesario del Émbolo Mayor</h3>
+
+          <div class="label">Descripción</div>
+
+          <p>
+            Se calcula el diámetro que debe tener el émbolo mayor para obtener una fuerza de 2000 N.
+          </p>
+
+          <div class="label">Explicación</div>
+
+          <p>
+            En este ejercicio se aplica el principio de Pascal y la fórmula del área circular. Primero se relacionan las fuerzas con los radios o diámetros, y después se despeja el radio del émbolo mayor. Finalmente, se multiplica por 2 para obtener el diámetro.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+
+      <div class="card">
+        <img src="Imagenes2/PERIODO2 4.jpg" alt="Evidencia 4">
+
+        <div class="card-content">
+
+          <h3>Fuerza Producida en el Émbolo Mayor</h3>
+
+          <div class="label">Descripción</div>
+
+          <p>
+            Se determina la fuerza que se producirá en el émbolo mayor usando los diámetros de ambos émbolos.
+          </p>
+
+          <div class="label">Explicación</div>
+
+          <p>
+            Como los émbolos son circulares, se usa la relación entre los diámetros al cuadrado. Esto permite comparar el tamaño de ambos émbolos sin calcular directamente el área completa. Al tener un diámetro mayor, el émbolo grande produce una fuerza más alta.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+
+      <div class="card">
+        <img src="Imagenes2/PERIODO2 5.jpg" alt="Evidencia 5">
+
+        <div class="card-content">
+
+          <h3>Diámetro del Émbolo Menor en una Prensa Hidráulica</h3>
+
+          <div class="label">Descripción</div>
+
+          <p>
+            Se calcula el diámetro que debe tener el émbolo menor para que una fuerza de 400 N produzca 4500 N en el émbolo mayor.
+          </p>
+
+          <div class="label">Explicación</div>
+
+          <p>
+            Se usa la igualdad de presiones entre los dos émbolos. Como ya se conoce la fuerza del émbolo menor, la fuerza del émbolo mayor y el diámetro mayor, se despeja el diámetro menor. Este cálculo muestra cómo el tamaño del émbolo influye directamente en la fuerza obtenida.
+          </p>
+
+        </div>
+      </div>
+
+
+    </section>
+
+  </main>
+
+</body>
+</html>

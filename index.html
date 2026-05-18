@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Página Web Física</title>
+
+  <style>
+
+    :root{
+      --bg:#0b1020;
+      --text:#eaf0ff;
+      --muted:#a7b4d6;
+      --line: rgba(255,255,255,.10);
+      --link:#6aa6ff;
+      --max: 1200px;
+    }
+
+    *{
+      box-sizing:border-box;
+    }
+
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+
+      background:
+        radial-gradient(1200px 700px at 20% 10%, rgba(124,92,255,.20), transparent 60%),
+        radial-gradient(1000px 600px at 80% 20%, rgba(106,166,255,.18), transparent 55%),
+        var(--bg);
+
+      line-height:1.7;
+    }
+
+    /* HEADER */
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      backdrop-filter:blur(10px);
+      background:rgba(11,16,32,.72);
+      border-bottom:1px solid var(--line);
+    }
+
+    .bar{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 20px;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+    }
+
+    .title{
+      font-weight:900;
+      font-size:18px;
+      letter-spacing:.3px;
+    }
+
+    .small{
+      color:var(--muted);
+      font-size:13px;
+      font-weight:700;
+    }
+
+    /* NAV */
+
+    nav{
+      display:flex;
+      gap:15px;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:white;
+      background:rgba(255,255,255,.08);
+      padding:10px 18px;
+      border-radius:12px;
+      font-size:14px;
+      font-weight:700;
+      transition:.2s;
+    }
+
+    nav a:hover{
+      background:rgba(255,255,255,.16);
+      transform:translateY(-2px);
+    }
+
+    /* MAIN */
+
+    main{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:40px 20px 80px;
+    }
+
+    h1{
+      font-size:52px;
+      line-height:1.1;
+      margin-bottom:10px;
+    }
+
+    .materia{
+      color:#6aa6ff;
+      font-size:20px;
+      font-weight:800;
+      margin-bottom:10px;
+    }
+
+    .note{
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    hr{
+      border:0;
+      border-top:1px solid var(--line);
+      margin:35px 0;
+    }
+
+    p{
+      color:rgba(234,240,255,.92);
+      font-size:16px;
+    }
+
+    .block{
+      border-left:3px solid rgba(106,166,255,.45);
+      padding-left:14px;
+      margin:22px 0;
+      color:var(--muted);
+    }
+
+    /* CARDS */
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:30px;
+      margin-top:40px;
+    }
+
+    .card{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:18px;
+      overflow:hidden;
+      backdrop-filter:blur(8px);
+      transition:.25s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 10px 30px rgba(0,0,0,.25);
+    }
+
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .card-content{
+      padding:20px;
+    }
+
+    .card h3{
+      margin-top:0;
+      margin-bottom:14px;
+      font-size:24px;
+    }
+
+    .label{
+      color:#6aa6ff;
+      font-weight:800;
+      margin-bottom:5px;
+    }
+
+    .card p{
+      color:#d6ddff;
+      font-size:14px;
+      margin-bottom:18px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:950px){
+
+      .cards{
+        grid-template-columns:1fr;
+      }
+
+      h1{
+        font-size:38px;
+      }
+
+      .bar{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      nav{
+        flex-wrap:wrap;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <div class="bar">
+
+      <div>
+        <div class="title">Página Web Física</div>
+        <div class="small">
+          Diego Baigts • Profesor Jovanni
+        </div>
+      </div>
+
+      <nav>
+        <a href="index.html">Periodo 1</a>
+        <a href="index2.html">Periodo 2</a>
+        <a href="index3.html">Periodo 3</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- MAIN -->
+
+  <main>
+
+    <div class="materia">Física • 4E</div>
+
+    <h1>
+      EVIDENCIAS DEL PRIMER PERIODO
+    </h1>
+
+    <p class="note">
+      12/01/26 - 18/05/26
+    </p>
+
+    <hr>
+
+    <p>
+      Bienvenido a la página oficial de trabajos del salón 4E. 
+      Aquí se muestran las evidencias y actividades realizadas durante el primer periodo de Física.
+    </p>
+
+    <div class="block">
+      “Los que preguntan no son tontos, los tontos son los que no preguntan.”
+    </div>
+
+    <p>
+      Gracias al profesor Jovanni por guiarnos durante este primer periodo.
+    </p>
+
+    <hr>
+
+    <!-- CARDS -->
+
+    <section class="cards">
+
+      <!-- CARD 1 -->
+
+      <div class="card">
+        <img src="Imagenes/Fisica.jpg" alt="Evidencia 1">
+
+        <div class="card-content">
+
+          <h3>Tensión en Poleas y Movimiento Vertical</h3>
+
+          <div class="label">Descripción</div>
+
+          <p>
+            Es el estudio de las fuerzas cuyas actúan sobre cuerpos suspendidos mediante cables o poleas mientras suben o bajan.
+          </p>
+
+          <div class="label">Explicación</div>
+
+          <p>
+            En estos ejercicios se aplican la segunda ley de Newton para calcular aquella tensión en un cable cuando un objeto tiene aceleración. Se analiza cómo el ésp y la tensión cambien dependiendo si el cuerpo asciende o desciende.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+
+      <div class="card">
+        <img src="Imagenes/Fisica2.jpg" alt="Evidencia 2">
+
+        <div class="card-content">
+
+          <h3>Elevador con Aceleración y Tensión del Cable</h3>
+
+          <div class="label">Descripción</div>
+
+          <p>
+            Se estudia un elevador que se mueve verticalmente y se detiene después de recorrer una distancia.
+          </p>
+
+          <div class="label">Explicación</div>
+
+          <p>
+            Primero se calcula la aceleración usando una fórmula de cinemática. Después, con la masa y el peso del elevador, se obtiene la tensión del cable aplicando la suma de fuerzas verticales.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+
+      <div class="card">
+        <img src="Imagenes/Fisica3.jpg" alt="Evidencia 3">
+
+        <div class="card-content">
+
+          <h3>Introducción a Fuerzas y Sistemas Colineales</h3>
+
+          <div class="label">Descripción</div>
+
+          <p>
+            Se explican conceptos básicos de física, mecánica y tipos de fuerzas.
+          </p>
+
+          <div class="label">Explicación</div>
+
+          <p>
+            Esta hoja presenta la diferencia entre física clásica y moderna, además de fuerzas coplanares y no coplanares. También se explican las fuerzas colineales, que son aquellas que actúan sobre una misma línea de acción.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+
+      <div class="card">
+        <img src="Imagenes/Fisica4.jpg" alt="Evidencia 4">
+
+        <div class="card-content">
+
+          <h3>Equilibrio de Fuerzas en Cuerdas con Ángulos</h3>
+
+          <div class="label">Descripción</div>
+
+          <p>
+            Se estudian sistemas donde un objeto está sostenido por dos cuerdas inclinadas.
+          </p>
+
+          <div class="label">Explicación</div>
+
+          <p>
+            Para resolver estos ejercicios, las tensiones se separan en componentes horizontales y verticales usando seno y coseno. Como el sistema está en equilibrio, la suma de fuerzas en X y en Y debe ser igual a cero.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+
+      <div class="card">
+        <img src="Imagenes/Fisica5.jpg" alt="Evidencia 5">
+
+        <div class="card-content">
+
+          <h3>Ejercicios de Tensión en Sistemas Suspendidos</h3>
+
+          <div class="label">Descripción</div>
+
+          <p>
+            Se resuelven varios problemas de tensión con diferentes pesos y ángulos.
+          </p>
+
+          <div class="label">Explicación</div>
+
+          <p>
+            En cada ejercicio se identifica el peso del objeto y las tensiones de las cuerdas. Luego se plantean ecuaciones de equilibrio para encontrar los valores desconocidos de tensión.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+
+      <div class="card">
+        <img src="Imagenes/Fisica6.jpg" alt="Evidencia 6">
+
+        <div class="card-content">
+
+          <h3>Momento de Torsión y Equilibrio Rotacional</h3>
+
+          <div class="label">Descripción</div>
+
+          <p>
+            Se analiza una barra con pesos colocados a diferentes distancias de un punto de apoyo.
+          </p>
+
+          <div class="label">Explicación</div>
+
+          <p>
+            El momento de torsión mide la capacidad de una fuerza para hacer girar un cuerpo. Para que la barra esté en equilibrio, la suma de fuerzas debe ser cero y la suma de momentos también debe ser cero.
+          </p>
+
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

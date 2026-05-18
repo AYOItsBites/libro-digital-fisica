@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Página Web Física</title>
+
+  <style>
+
+    :root{
+      --bg:#0b1020;
+      --text:#eaf0ff;
+      --muted:#a7b4d6;
+      --line: rgba(255,255,255,.10);
+      --link:#6aa6ff;
+      --max: 1200px;
+    }
+
+    *{
+      box-sizing:border-box;
+    }
+
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+
+      background:
+        radial-gradient(1200px 700px at 20% 10%, rgba(124,92,255,.20), transparent 60%),
+        radial-gradient(1000px 600px at 80% 20%, rgba(106,166,255,.18), transparent 55%),
+        var(--bg);
+
+      line-height:1.7;
+    }
+
+    /* HEADER */
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      backdrop-filter:blur(10px);
+      background:rgba(11,16,32,.72);
+      border-bottom:1px solid var(--line);
+    }
+
+    .bar{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 20px;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+    }
+
+    .title{
+      font-weight:900;
+      font-size:18px;
+      letter-spacing:.3px;
+    }
+
+    .small{
+      color:var(--muted);
+      font-size:13px;
+      font-weight:700;
+    }
+
+    /* NAV */
+
+    nav{
+      display:flex;
+      gap:15px;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:white;
+      background:rgba(255,255,255,.08);
+      padding:10px 18px;
+      border-radius:12px;
+      font-size:14px;
+      font-weight:700;
+      transition:.2s;
+    }
+
+    nav a:hover{
+      background:rgba(255,255,255,.16);
+      transform:translateY(-2px);
+    }
+
+    /* MAIN */
+
+    main{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:40px 20px 80px;
+    }
+
+    h1{
+      font-size:52px;
+      line-height:1.1;
+      margin-bottom:10px;
+    }
+
+    .materia{
+      color:#6aa6ff;
+      font-size:20px;
+      font-weight:800;
+      margin-bottom:10px;
+    }
+
+    .note{
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    hr{
+      border:0;
+      border-top:1px solid var(--line);
+      margin:35px 0;
+    }
+
+    p{
+      color:rgba(234,240,255,.92);
+      font-size:16px;
+    }
+
+    .block{
+      border-left:3px solid rgba(106,166,255,.45);
+      padding-left:14px;
+      margin:22px 0;
+      color:var(--muted);
+    }
+
+    /* CARDS */
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:30px;
+      margin-top:40px;
+    }
+
+    .card{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:18px;
+      overflow:hidden;
+      backdrop-filter:blur(8px);
+      transition:.25s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 10px 30px rgba(0,0,0,.25);
+    }
+
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .card-content{
+      padding:20px;
+    }
+
+    .card h3{
+      margin-top:0;
+      margin-bottom:14px;
+      font-size:24px;
+    }
+
+    .label{
+      color:#6aa6ff;
+      font-weight:800;
+      margin-bottom:5px;
+    }
+
+    .card p{
+      color:#d6ddff;
+      font-size:14px;
+      margin-bottom:18px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:950px){
+
+      .cards{
+        grid-template-columns:1fr;
+      }
+
+      h1{
+        font-size:38px;
+      }
+
+      .bar{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      nav{
+        flex-wrap:wrap;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <div class="bar">
+
+      <div>
+        <div class="title">Página Web Física</div>
+        <div class="small">
+          Diego Baigts • Profesor Jovanni
+        </div>
+      </div>
+
+      <nav>
+        <a href="index.html">Periodo 1</a>
+        <a href="index2.html">Periodo 2</a>
+        <a href="index3.html">Periodo 3</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- MAIN -->
+
+  <main>
+
+    <div class="materia">Física • 4E</div>
+
+    <h1>
+      EVIDENCIAS DEL TERCER PERIODO
+    </h1>
+
+    <p class="note">
+      12/01/26 - 18/05/26
+    </p>
+
+    <hr>
+
+    <p>
+      Bienvenido a la página oficial de trabajos del salón 4E. 
+      Aquí se muestran las evidencias y actividades realizadas durante el tercer periodo de Física.
+    </p>
+
+    <div class="block">
+      “Los que preguntan no son tontos, los tontos son los que no preguntan.”
+    </div>
+
+    <p>
+      Gracias al profesor Jovanni por guiarnos durante este tercer  y último periodo.
+    </p>
+
+    <hr>
+
+    <!-- CARDS -->
+
+    <section class="cards">
+
+      <!-- CARD 1 -->
+
+      <div class="card">
+        <img src="Imagenes3/periodo3 1.jpg" alt="Evidencia 1">
+
+        <div class="card-content">
+
+          <h3>Termodinámica y Escalas de Temperatura</h3>
+
+          <div class="label">Descripción</div>
+
+          <p>
+            Se introduce la termodinámica como la rama de la física que estudia el calor, la temperatura y la transferencia de energía térmica.
+          </p>
+
+          <div class="label">Explicación</div>
+
+          <p>
+            En esta hoja se diferencia entre calor y temperatura. La temperatura indica qué tan caliente o frío está un cuerpo, mientras que el calor es energía que se transfiere de un cuerpo con mayor temperatura a otro con menor temperatura. También se explican las escalas Celsius, Kelvin, Fahrenheit y Rankine, junto con sus fórmulas de conversión.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+
+      <div class="card">
+        <img src="Imagenes3/periodo3 2.jpg" alt="Evidencia 2">
+
+        <div class="card-content">
+
+          <h3>Dilatación Térmica Lineal y de Área</h3>
+
+          <div class="label">Descripción</div>
+
+          <p>
+            Se estudia cómo los cuerpos cambian sus dimensiones cuando aumenta o disminuye su temperatura.
+          </p>
+
+          <div class="label">Explicación</div>
+
+          <p>
+            La dilatación ocurre cuando un material se expande por efecto del calor. En esta hoja se trabaja principalmente la dilatación lineal, que afecta la longitud, y la dilatación de área, que afecta superficies. Se usan coeficientes de dilatación para calcular cuánto cambia un objeto según el material y la variación de temperatura.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+
+      <div class="card">
+        <img src="Imagenes3/periodo3 3.jpg" alt="Evidencia 3">
+
+        <div class="card-content">
+
+          <h3>Dilatación Volumétrica</h3>
+
+          <div class="label">Descripción</div>
+
+          <p>
+            Se analiza el aumento o disminución del volumen de un cuerpo cuando cambia su temperatura.
+          </p>
+
+          <div class="label">Explicación</div>
+
+          <p>
+            La dilatación volumétrica ocurre cuando un objeto cambia en sus tres dimensiones: largo, ancho y alto. Se usa la fórmula del volumen final para calcular cuánto se expande o contrae una sustancia. También se muestran coeficientes volumétricos de diferentes materiales.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+
+      <div class="card">
+        <img src="Imagenes3/periodo3 4.jpg" alt="Evidencia 4">
+
+        <div class="card-content">
+
+          <h3>Propagación del Calor y Calor Específico</h3>
+
+          <div class="label">Descripción</div>
+
+          <p>
+            Se explican las formas en que el calor se transfiere y cómo cada material absorbe energía térmica.
+          </p>
+
+          <div class="label">Explicación</div>
+
+          <p>
+            El calor puede propagarse por conducción, convección y radiación. También se presenta el concepto de calor específico, que indica cuánta energía necesita una sustancia para aumentar su temperatura
+          </p>
+
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+
+      <div class="card">
+        <img src="Imagenes3/periodo3 5.jpg" alt="Evidencia 5">
+
+        <div class="card-content">
+
+          <h3>Calor Latente y Calor Absorbido o Cedido</h3>
+
+          <div class="label">Descripción</div>
+
+          <p>
+            Se estudian los cambios de estado y el intercambio de calor entre cuerpos.
+          </p>
+
+          <div class="label">Explicación</div>
+
+          <p>
+            El calor latente es la energía necesaria para que una sustancia cambie de estado, por ejemplo de sólido a líquido o de líquido a gas, sin cambiar su temperatura. También se explica que el calor cedido por un cuerpo puede ser absorbido por otro, como ocurre en mezclas de agua, metales o calorímetros.
+          </p>
+
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+
+      <div class="card">
+        <img src="Imagenes3/periodo3 6.jpg" alt="Evidencia 6">
+
+        <div class="card-content">
+
+          <h3>Problemas de Dilatación Volumétrica</h3>
+
+          <div class="label">Descripción</div>
+
+          <p>
+            Se resuelven ejercicios donde se calcula el volumen final o la dilatación de materiales al cambiar su temperatura.
+          </p>
+
+          <div class="label">Explicación</div>
+
+          <p>
+            En esta hoja se aplican fórmulas de dilatación cúbica o volumétrica para resolver problemas con cobre, aluminio y otros materiales. Se usan datos como volumen inicial, temperatura inicial, temperatura final y coeficiente de dilatación para encontrar cuánto aumenta o disminuye el volumen.
+          </p>
+
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
